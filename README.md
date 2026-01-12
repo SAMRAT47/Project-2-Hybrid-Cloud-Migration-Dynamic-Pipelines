@@ -86,10 +86,10 @@ The entire workflow is automated and monitored for reliability.
 * **Security:** Secured connections using Key Vault (best practice simulation) and Self-Hosted IR for private network access.
 * **CI/CD:** Configured Git integration for version control, branching strategies, and collaboration.
 
-## 👤 Author
-**Samrat**
-* [LinkedIn Profile](https://www.linkedin.com/in/samrat-roychoudhury/)
-* [Mail Id](samrat.networkwan@gmail.com)
+## 📬 Contact
+**Author**: Samrat Roychoudhury
+* **LinkedIn**: https://www.linkedin.com/in/samrat-roychoudhury/
+* **Email**: samrat.rc47@gmail.com
 
 ---
 *Note: This project serves as a proof-of-concept for modern cloud data migration strategies.*
