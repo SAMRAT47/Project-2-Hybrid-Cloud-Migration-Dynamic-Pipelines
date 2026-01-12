@@ -1,0 +1,9 @@
+{
+	"name": "samratrcfactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "36feac04-ad4f-4378-a73f-a89c2ebdb720",
+		"tenantId": "46f20d16-09bb-41c8-8105-6e1d5b58311e"
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"name": "Samrat-SelfHosted",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

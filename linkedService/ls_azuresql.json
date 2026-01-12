@@ -1,0 +1,17 @@
+{
+	"name": "ls_azuresql",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adfprojectsamrat.database.windows.net",
+			"database": "adfprojectdb",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "adim",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDZDNTk0QTY0LUQ4MUUtNEY2My1CMUU3LTYzNUYxNDkwRjY4Nl85N2FjNjlkOC03Yzc1LTRlMWQtYjViZS0yNzMwNjAzZjRhZTIiDQp9"
+		}
+	}
+}
