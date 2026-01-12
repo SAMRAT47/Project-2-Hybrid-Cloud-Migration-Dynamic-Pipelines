@@ -32,11 +32,11 @@ The architecture follows a modern Lakehouse approach, moving data through three 
 ### 1. Data Ingestion (Bronze Layer)
 This module handles the extraction of data from three distinct sources, showcasing versatility in handling hybrid environments.
 
-![OnPrem Ingestion Pipelines]([images/ingestion-pipelines.png](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/OnPrem%20Ingesion.PNG)
+![OnPrem Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/OnPrem%20Ingesion.PNG)
 
-![API Ingestion Pipelines]([images/ingestion-pipelines.png](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/API%20Ingestion%20pipeline.PNG)
+![API Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/API%20Ingestion%20pipeline.PNG)
 
-![SQL Ingestion Pipelines]([images/ingestion-pipelines.png](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/SQL%20to%20Datalake%20ingestion.PNG)
+![SQL Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/SQL%20to%20Datalake%20ingestion.PNG)
 
 * **HTTP/REST API:** Dynamically fetches raw JSON data from web endpoints (simulated using GitHub raw content).
 * **On-Premise Files:** Uses a **Self-Hosted Integration Runtime** to securely connect to a local machine/private network and migrate file-based data to the cloud.
