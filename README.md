@@ -27,7 +27,7 @@ The architecture follows a modern Lakehouse approach, moving data through three 
 * **Monitoring:** Azure Logic Apps & Azure Monitor
 * **DevOps:** Git Integration (Azure DevOps/GitHub)
 
-  **Services Azure Resource Groups:**
+  ** 🛠️ Services inside Azure Resource Groups:**
 
   ![ResourceGroup Image](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/project2%20resource%20group.PNG)
 
@@ -88,8 +88,8 @@ The entire workflow is automated and monitored for reliability.
 
 ## 👤 Author
 **Samrat**
-* [LinkedIn Profile](https://www.linkedin.com/)
-* [GitHub Profile](https://github.com/SAMRAT47)
+* [LinkedIn Profile](https://www.linkedin.com/in/samrat-roychoudhury/)
+* [Mail Id](samrat.networkwan@gmail.com)
 
 ---
 *Note: This project serves as a proof-of-concept for modern cloud data migration strategies.*
