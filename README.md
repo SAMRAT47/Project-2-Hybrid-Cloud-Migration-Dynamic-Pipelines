@@ -16,6 +16,8 @@ The architecture follows a modern Lakehouse approach, moving data through three 
 
 ---
 
+
+
 ## 🛠️ Tech Stack & Tools
 * **Orchestration:** Azure Data Factory (ADF) V2
 * **Storage:** Azure Data Lake Storage Gen2 (ADLS)
@@ -24,6 +26,10 @@ The architecture follows a modern Lakehouse approach, moving data through three 
 * **Transformation:** ADF Mapping Data Flows (Spark Cluster)
 * **Monitoring:** Azure Logic Apps & Azure Monitor
 * **DevOps:** Git Integration (Azure DevOps/GitHub)
+
+  **Services Azure Resource Groups:**
+
+  ![ResourceGroup Image](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/project2%20resource%20group.PNG)
 
 ---
 
@@ -34,9 +40,16 @@ This module handles the extraction of data from three distinct sources, showcasi
 
 ![OnPrem Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/OnPrem%20Ingesion.PNG)
 
+* **On-Premise Files:** Uses a **Self-Hosted Integration Runtime** to securely connect to a local machine/private network and migrate file-based data to the cloud.
+  
 ![API Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/API%20Ingestion%20pipeline.PNG)
 
+* **HTTP/REST API:** Dynamically fetches raw JSON data from web endpoints (simulated using GitHub raw content).
+
 ![SQL Ingestion Pipelines](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/SQL%20to%20Datalake%20ingestion.PNG)
+
+* **Azure SQL Database (Incremental Load):** Implements a **Watermarking Pattern**. It tracks the `LastModifiedDate` to fetch only new or updated records since the last run, optimizing performance.
+
 
 * **HTTP/REST API:** Dynamically fetches raw JSON data from web endpoints (simulated using GitHub raw content).
 * **On-Premise Files:** Uses a **Self-Hosted Integration Runtime** to securely connect to a local machine/private network and migrate file-based data to the cloud.
@@ -45,7 +58,7 @@ This module handles the extraction of data from three distinct sources, showcasi
 ### 2. Data Transformation (Silver Layer)
 Raw data is processed using **ADF Mapping Data Flows**, providing a visual interface for complex Spark logic without writing code.
 
-![Data Transformation Flow](images/data-transformation.png)
+![Data Transformation Flow](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/Data%20Transformation.PNG)
 * **Data Cleaning:** Handling NULL values, casting data types (e.g., String to Integer), and removing duplicates.
 * **Standardization:** Renaming columns to camelCase and formatting dates for consistency.
 * **Schema Drift:** Handling dynamic schema changes from sources automatically.
@@ -53,7 +66,7 @@ Raw data is processed using **ADF Mapping Data Flows**, providing a visual inter
 ### 3. Business Logic & Serving (Gold Layer)
 The final layer prepares data for consumption by analytical tools (like Power BI).
 
-![Data Serving Logic](images/data-serving.png)
+![Data Serving Logic](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/Data%20Serving.PNG)
 * **Joins:** Combining Fact and Dimension tables (e.g., Joining `Sales` with `Customer` data).
 * **Aggregations & Window Functions:** Calculating metrics like *Total Revenue per Region* and using `Dense_Rank` to identify top-performing products.
 * **Upsert Logic:** Using Delta Lake capabilities to update existing records and insert new ones (Merge operation).
@@ -61,7 +74,7 @@ The final layer prepares data for consumption by analytical tools (like Power BI
 ### 4. Orchestration & Alerting
 The entire workflow is automated and monitored for reliability.
 
-![Logic App Alert](images/logic-app-email.png)
+![Logic App Alert](https://github.com/SAMRAT47/Project-2-Hybrid-Cloud-Migration-Dynamic-Pipelines/blob/main/Images/Logic%20App%20Alart.PNG)
 * **Master Pipeline:** A parent pipeline executes child pipelines in a specific sequence using `Execute Pipeline` activities.
 * **Error Handling:** Try-Catch logic is implemented to capture failures.
 * **Automated Alerts:** An **Azure Logic App** is triggered via Webhooks upon pipeline failure, sending a customized email notification with the *Pipeline Name*, *Error Message*, and *Run ID*.
